@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Refrigerator Selling</title>
+  </head>
+  <style>
+    .tran-a:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+    }
+    .bb-a {
+      width: 19%;
+      border: 1px solid black;
+      color: black;
+    }
+    .bb-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 1s;
+      background-color: black;
+      color: #fff;
+    }
+    .spacer-a {
+      height: 50px;
+      padding: 50px;
+    }
+
+    .tag {
+      background-color: #79b6c8;
+      /* transform: rotate(119deg); */
+      color: white;
+      position: absolute;
+      z-index: 10;
+      width: 60px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      box-shadow: 1px 1px 7px -3px black;
+    }
+    .bb1-a {
+      border: 1px solid black;
+      color: black;
+    }
+    .bb1-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 1s;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: #fff;
+    }
+    /* .accordion-button
+    {
+      width:100%;
+    } */
+    .accordion-button::after {
+      flex-shrink: 0;
+      width: 1.25rem;
+      margin-left: auto;
+      margin-right: 0px;
+      position: relative;
+      height: 1.25rem;
+      align-items: end;
+      /* position: relative;
+      left: 50px; */
+      background-image: url(
+        data:image/svg + xml,
+        %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"fill="%23212529"%3e%3cpathfill-rule="evenodd"d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/%3e%3c/svg%3e
+      );
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      transition: transform 0.2s ease-in-out;
+      float: left;
+    }
+
+    @media only screen and (max-width: 540px) {
+      .bb1-a {
+        border: 1px solid black;
+        color: black;
+      }
+      .bb-a {
+        border: 1px solid black;
+        color: black;
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <header class="main-header">
+      <div class="mh1">
+        <img
+          src="./image-removebg-preview (12).png"
+          alt="Coolbridge"
+          class="i1"
+        />
+      </div>
+      <div class="mh3">
+        <ul>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html"><li>Products</li></a>
+          <a href="./cart.html"><li>Cart</li></a>
+        </ul>
+      </div>
+
+      <div class="toggle-div">
+        <a href="./cart.html"
+          ><i
+            class="fa-solid fa-cart-shopping"
+            style="color: #ffffff; height: 30px; padding-right: 40px"
+          ></i
+        ></a>
+        <button style="object-fit: cover" id="nav-button" onclick="clickNav()">
+          <img id="toggle" src="./toggle_icon-removebg-preview.png" alt="" />
+        </button>
+        <!-- <div id="toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+
+        <div id="menu">Hello, I'm a menu!</div> -->
+      </div>
+      <div class="navlist">
+        <ul>
+          <a href="./index.html"><li>Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html"><li>Products</li></a>
+          <a href="./cart.html"><li>Cart</li></a>
+        </ul>
+      </div>
+      <!-- <div class="mh2">
+        <img src="./cart icon.jpg" alt="cart" class="i2" />
+        <div class="d7">
+        <img src="./toggle_icon-removebg-preview.png" alt="about us" class="i3"/>
+        <div class="d6">  
+            <ul>
+                <li id="li1">Home</li>
+                <li>About Us</li>
+                <li>Restaurants</li>
+                <li>Pages</li>
+                <li>Contact Us</li>
+              </ul>
+        </div>
+    </div>
+        <div class="i4">About Us</div>
+      </div> -->
+    </header>
+    <!-- <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+        <div class="container-fluid bg-dark">
+          <a class="text-light navbar-brand" href="#">
+            <img
+              style="width: 60px"
+              src="./image-removebg-preview (12).png"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler bg-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light active"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our Products
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header> -->
+    <main>
+      <section>
+        <div
+          class="container-fluid align-content-end"
+          style="
+            background-image: url(/img/W020220426449217205942.jpg);
+            background-size: cover;
+            padding-top: 100px;
+            padding-bottom: 100px;
+          "
+        >
+          <div class="container text-end">
+            <p class="fs-2 fw-light cs-a mb-0">WE PREFER QUALITY</p>
+            <p class="fs-1 fw-bolder cs-a">SMART REFRIGERATOR</p>
+            <div class="btn btn-outline-primary bb-a">Shop Now</div>
+          </div>
+        </div>
+      </section>
+      <section class="car-sec">
+        <div
+          class="container carous-div d-flex align-items-center justify-content-center"
+        >
+          <div class="row d-flex flex-wrap align-items-center justify-content-center">
+            <div class="col-6" style="min-width: 400px;">
+              <div class="row">
+                <div class="col-12" style="background-color: #f0f0f0">
+                  <div class="container">
+                    <div
+                      id="carouselExampleAutoplaying"
+                      class="carousel slide"
+                      data-bs-ride="carousel"
+                    >
+                      <div class="carousel-inner">
+                        <div
+                          class="carousel-item active"
+                          data-bs-interval="3000"
+                        >
+                          <img
+                            src="./imgref1.jpg"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div
+                          class="carousel-item"
+                          style="background-color: #f0f0f0"
+                          data-bs-interval="3000"
+                        >
+                          <img
+                            src="./imgref2.jpg"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                          <img
+                            src="./imgref3.jpg"
+                            class="d-block w-100"
+                            alt="..."
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev"
+                      >
+                        <span
+                          class="carousel-control-prev-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next"
+                      >
+                        <span
+                          class="carousel-control-next-icon"
+                          aria-hidden="true"
+                        ></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 " style="min-width: 400px;">
+              <div class="row">
+                <div class="col-12 p-2 pt-5">
+                  <h2 class="head-2">Welcome to CoolBreeze Refrigerators!</h2>
+                  <br />
+                  <br />
+                  <div class="leftsection">
+                    Get Ready to Explore our
+                    <span class="purple"> BRAND NEW </span>Products ......
+                    <br />
+                    <!-- Element to contain animated typing -->
+                    <h3><span id="element" class="purple"></span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="spacer-a"></div>
+      <section>
+        <div
+          class="container fw-bolder d-flex align-items-center justify-content-center"
+        >
+          <div class="headp">
+            <h2 style="font-weight: 900; font-size: 40px">OUR PRODUCTS</h2>
+          </div>
+          <br />
+        </div>
+        <!-- <div class="container w-25 bg-black " style="height:0px; background-color:#437c8a"></div> -->
+        <div class="spacer-a"></div>
+        <div class="container">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="/img/ref.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                712 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                628 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 91,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                630 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                531 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 71,900/-</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-a"></div>
+        <div class="container">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" class="new" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                628 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                531 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 61,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                630 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref.jpg" class="w-100" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                712 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 71,900/-</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container">
+          <div class="conhead text-wrap fs-1 fw-bold w-75">
+            Why Choose
+            <span style="color: #437c8a">CoolBreeze Refrigerators?</span>
+          </div>
+
+          <div class="row d-flex gap-6 flex-wrap">
+            <div class="col-md-12 col-lg-4 col-sm-12 row-con">
+              <h4
+                class="pt-4 border-top border-dark fw-bold"
+                style="width: max-content"
+              >
+                Cutting-Edge Technology
+              </h4>
+              <p class="pt-5">
+                Our refrigerators are equipped with the latest cooling
+                technology to ensure consistent temperatures, optimal freshness,
+                and energy efficiency.
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-4 col-sm-12 row-con fs-6">
+              <h4
+                class="pt-4 border-top border-dark fw-bold"
+                style="width: max-content"
+              >
+                Energy Efficiency
+              </h4>
+              <p class="pt-5">
+                We prioritize sustainability by offering energy-efficient models
+                that not only save you money on utility bills but also
+                contribute to a greener environment.
+              </p>
+            </div>
+            <div class="col-md-12 col-lg-4 col-sm-12 row-con">
+              <h4
+                class="pt-4 border-top border-dark fw-bold"
+                style="width: max-content"
+              >
+                Smart Features
+              </h4>
+              <p class="pt-5">
+                Discover the convenience of smart refrigeration with features
+                like temperature control through your smartphone based
+                temperature control.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container d-flex align-items-center justify-content-center">
+          <h4>Have any query regarding product?</h4>
+        </div>
+        <div class="spacer-a" style="height: 30px; padding: 30px"></div>
+        <div class="container d-flex align-items-center justify-content-center">
+          <div
+            class="w-75 accordion accordion-flush"
+            id="accordionFlushExample"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  How can I improve the energy efficiency of my refrigerator?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <p>
+                    <li>Keep the refrigerator door closed when not in use.</li>
+                    <li>Ensure proper sealing of the door gasket.</li>
+                    <li>
+                      Avoid overloading the fridge; proper air circulation
+                      enhances efficiency.
+                    </li>
+                    <li>Set the temperature to the recommended level.</li>
+                    <li>
+                      Place the refrigerator away from heat sources and direct
+                      sunlight.
+                    </li>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  What's the difference between frost-free and manual defrost
+                  freezers?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Frost-free freezers automatically defrost themselves,
+                  preventing ice buildup. Manual defrost freezers need periodic
+                  defrosting to remove accumulated ice. Frost-free models offer
+                  convenience, while manual defrost freezers tend to be more
+                  energy-efficient.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  How do I clean and maintain my refrigerator?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  <ul>
+                    <li>
+                      Regularly clean the interior with a mixture of mild soap
+                      and warm water
+                    </li>
+                    <li>Wipe spills promptly to prevent odors and stains.</li>
+                    <li>
+                      Vacuum the coils on the back or underneath the fridge to
+                      improve efficiency.
+                    </li>
+                    <li>
+                      Check and replace the water filter if your refrigerator
+                      has a water dispenser or ice maker.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer" style="height: 70px; width: 100%"></div>
+    </main>
+    <footer>
+      <div class="footer">
+        <h2>Questions? Call 000-800-919-1694</h2>
+        <div class="row">
+          <div class="col">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relation</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+          </div>
+          <div class="col">
+            <a href="#">Help Center</a>
+            <a href="#">Products</a>
+            <a href="#">Cookies Preferences</a>
+            <a href="#">Legal Notices</a>
+          </div>
+          <div class="col">
+            <a href="#">Accounts</a>
+            <a href="#">Ways To Watch</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Only On Coolbridge </a>
+          </div>
+          <div class="col">
+            <a href="#">Media center</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <button class="language-btn">
+          <img
+            src="./globe_image-removebg-preview.png"
+            alt=""
+            class="button-globe"
+          />
+          English <img src="./down-icon.png" alt="" class="down-icon-image" />
+        </button>
+        <h6 class="copyright-content"></h6>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Double Door Refrigerators",
+          "Compact Refrigerators",
+          "Bottom Freezer Refrigerators",
+          "Top Freezer Refrigerators",
+          "Side-by-Side Refrigerators",
+        ],
+        typeSpeed: 60,
+      });
+    </script>
+    <script src="myscript.js"></script>
+  </body>
+</html>

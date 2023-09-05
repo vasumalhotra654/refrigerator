@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Shopping cart</title>
+  </head>
+  <style>
+    * {
+      font-family: "Lato";
+      box-sizing: border-box;
+      height: min-content;
+     
+    }
+    .align {
+      vertical-align: middle;
+    }
+    .spacer-a {
+      width: 100%;
+      height: 50px;
+      padding: 50px;
+    }
+    .table {
+      font-size: 13px;
+    }
+    .sele-a {
+      border: 1px solid #808080c9;
+      border-radius: 5px;
+      width: 73px;
+      padding: 6px;
+    }
+    .bb2-a {
+      border: 1px solid black;
+      color: white;
+      background-color: black;
+    }
+    .bb2-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 1s;
+      background-color: #79b6c8;
+      color: black;
+    }
+    .bb3-a {
+      border: 1px solid white;
+      color: white;
+      background-color: #79b6c8;
+    }
+    .bb3-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 0.61s;
+      background-color: #4faeca;
+      transform: scale(1.1);
+    }
+    .width-a {
+      width: 50%;
+    }
+    @media only screen and (max-width: 992px) {
+      .width-a {
+        width: 100%;
+      }
+      .bb2-a {
+        margin-top: 20px;
+      }
+    }
+    @media only screen and (max-width: 901px) {
+     
+    }
+  </style>
+  <body>
+    <header class="main-header">
+      <div class="mh1">
+        <img
+          src="/image-removebg-preview (12).png"
+          alt="Coolbridge" style="width: 50px;"
+          class="i1"
+        />
+      </div>
+      <div class="mh3">
+        <ul>
+          <a href="./index.html"><li >Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html" ><li>Products</li></a>
+          <a href="./cart.html" ><li>Cart</li></a>
+        </ul>
+      </div>
+
+      <div class="toggle-div " >
+         <a href="./cart.html"><i
+          class="fa-solid fa-cart-shopping"
+          style="color: #ffff; height: 30px; padding-right: 40px  ;z-index: 2;"
+        ></i></a>
+        <button style="object-fit: cover" id="nav-button" onclick="clickNav()">
+          <img id="toggle" src="/toggle_icon-removebg-preview.png"  alt="" />
+        </button>
+        <!-- <div id="toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+
+        <div id="menu">Hello, I'm a menu!</div> -->
+      </div>
+      <div class="navlist" >
+        <ul>
+          <a href="./index.html"><li >Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html" ><li>Products</li></a>
+          <a href="./cart.html" ><li>Cart</li></a>
+        </ul>
+      </div>
+      <!-- <div class="mh2">
+        <img src="./cart icon.jpg" alt="cart" class="i2" />
+        <div class="d7">
+        <img src="./toggle_icon-removebg-preview.png" alt="about us" class="i3"/>
+        <div class="d6">  
+            <ul>
+                <li id="li1">Home</li>
+                <li>About Us</li>
+                <li>Restaurants</li>
+                <li>Pages</li>
+                <li>Contact Us</li>
+              </ul>
+        </div>
+    </div>
+        <div class="i4">About Us</div>
+      </div> -->
+    </header>
+    <main>
+      <section>
+        <div class="container pt-3">
+          <p class="fw-light">
+            Home &nbsp; / &nbsp;
+            <a href="" class="p-0 text-decoration-none text-blue"
+              >Shopping cart</a
+            >
+          </p>
+          <hr />
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container">
+          <h5 class="fw-bolder">SHOPPING CART</h5>
+          <hr style="width: 3%; color: black; height: 5px" />
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <table class="table table-responsive-sm">
+            <thead>
+              <tr>
+                <th style="width: 19%">PRODUCT PHOTO</th>
+                <th style="width: 19%">PRODUCT NAME</th>
+                <th style="width: 26%">DESCRIPTION</th>
+                <th class="text-center" style="width: 13%">PRICE</th>
+                <th class="text-center" style="width: 12%">QUANTITY</th>
+                <th class="text-center" style="width: 15%">TOTAL PRICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="width: 19%">
+                  <img src="/img/ref.jpg" class="w-50" alt="refrigerator" />
+                </td>
+                <td style="width: 19%" class="align fw-bolder">
+                  <h5 class="" style="font-size: 14px; width: 83%">
+                    712 Litres, Inverter French Door Refrigerator
+                  </h5>
+                </td>
+                <td
+                  class="align"
+                  style="width: 26%; font-size: 13px"
+                >
+                  <p style="width: 90%">
+                    The refrigerator, designed for utmost convenience, allows
+                    easy transformation from freezer to fridge via temperature
+                    adjustments.
+                  </p>
+                </td>
+                <td
+                  class="align fw-bolder text-center"
+                  style="width: 13%; color: #79b6c8"
+                >
+                  <p>Rs.86,000/-</p>
+                  <input
+                    type="text"
+                    id="price"
+                    value="86000"
+                    placeholder=""
+                    hidden
+                  />
+                </td>
+                <td class="align text-center" style="width: 12%">
+                  <input
+                    type="number"
+                    placeholder=""
+                    id="quantity"
+                    class="sele-a fw-bold"
+                    value="1"
+                    onchange="multiply()"
+                  />
+                </td>
+                <td
+                  class="align text-center"
+                  style="width: 15%; color: #79b6c8"
+                >
+                  <p id="inpoa"></p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 19%">
+                  <img src="/img/ref2.jpg" class="w-50" alt="refrigerator" />
+                </td>
+                <td style="width: 19%" class="align fw-bolder">
+                  <h5 class="" style="font-size: 14px; width: 83%">
+                    628 Litres, Convertible Side By Side Refrigerator
+                  </h5>
+                </td>
+                <td
+                  class=" align"
+                  style="width: 26%; font-size: 13px"
+                >
+                  <p style="width: 90%">
+                    The refrigerator, designed for utmost convenience, allows
+                    easy transformation from freezer to fridge via temperature
+                    adjustments.
+                  </p>
+                </td>
+                <td
+                  class="align fw-bolder text-center"
+                  style="width: 13%; color: #79b6c8"
+                >
+                  <p>Rs.79,000/-</p>
+                  <input
+                    type="text"
+                    id="price1"
+                    value="79000"
+                    placeholder=""
+                    hidden
+                  />
+                </td>
+                <td class="align text-center" style="width: 12%">
+                  <input
+                    type="number"
+                    placeholder=""
+                    id="quantity1"
+                    class="sele-a fw-bold"
+                    value="1"
+                    onchange="multiplyy()"
+                  />
+                </td>
+                <td
+                  class="align text-center"
+                  style="width: 15%; color: #79b6c8"
+                >
+                  <p id="inpoa1"></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 ">
+              <div
+                class="btn btn-outline-primary fw-bolder width-a bb2-a"
+                style="font-size: small ;  width: 100%;" 
+              >
+                CONTINUE SHOPPING
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div
+                class="btn btn-outline-primary fw-bolder w-100 bb2-a"
+                style="font-size: small; width: 100%;"
+              >
+                UPDATE SHOPPING CART
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div
+                class="btn btn-outline-primary fw-bolder w-100 bb2-a"
+                style="font-size: small; width: 100%;"
+              >
+                CLEAR SHOPPING CART
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container ">
+          <div class="row">
+            <div class="col-lg-4 mt-5">
+              <div class="container">
+                <h5 class="fw-bolder fs-6">CALCULATE SHIPPING</h5>
+                <hr style="width: 3%; color: black; height: 5px" />
+              </div>
+              <div class="container">
+                <label for="Country" class="w-100"
+                  >Enter your Country</label
+                >
+                <input
+                  type="text"
+                  class="mt-3 p-2"
+                  name=""
+                  id="Country"
+                  placeholder="India (IN)"
+                />
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label for="state" class=" mt-3 w-100"  style="font-size: 15px;"
+                      >Enter your State</label
+                    >
+                    <input
+                      type="text"
+                      class="mt-3 p-2 w-100" 
+                      name=""
+                      id="state"
+                      placeholder="Delhi"
+                    />
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="state" class=" mt-3 w-100"  style="font-size: 15px;"
+                      >Zip <code></code></label
+                    >
+                    <input
+                      type="text"
+                      class="mt-3 p-2 w-100"
+                      name=""
+                      id="state"
+                      placeholder="Zip code"
+                    />
+                  </div>
+                  </div>
+                  <div
+                class="btn btn-outline-primary w-100  width-a w-100 bb2-a mt-4 p-2"
+                style="font-size: 13px;"
+              >
+                UPDATE SHIPPING
+              </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-5">
+                <div class="container mb-4">
+                  <h5 class="fw-bolder w-100 fs-6">COUPON CODE</h5>
+                  <hr style="width: 3%; color: black; height: 5px" />
+                </div>
+                <div class="container">
+                  <p  class="w-100 align"
+                  style="  font-size: 13px">
+                    The refrigerator, designed for utmost convenience, allows
+                    easy transformation from freezer to fridge via temperature
+                    adjustments.
+                  </p>
+                </div>
+                <div class="container">
+                  <label for="state" class="mt-3 mb-3 w-100"  style="font-size: 15px;"
+                      >Coupon Code <code></code></label
+                    >
+                    <input
+                      type="text"
+                      class="mt-1 p-2 w-100"
+                      name=""
+                      id="state"
+                      placeholder="98F45T113"
+                    />
+                    <div
+                class="btn btn-outline-primary  w-100  width-a bb2-a mt-3 p-2"
+                style="font-size: 13px;"
+              >
+                REDEEM CODE
+              </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mt-5">
+                <div class="container">
+                  <h5 class="fw-bolder fs-6">CART TOTALS</h5>
+                  <hr style="width: 3%; color: black; height: 5px" />
+                </div>
+                <div class="Container">
+                  <hr>
+                <div class="container" >
+                  <div class="row">
+                    <div class="col-8">
+                      <p style="font-size: small; padding-bottom: 0;">
+                        Cart Subtotal
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <p id="inpoa2" style="font-size: 13px; padding-bottom: 0;"></p>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="container" >
+                  <div class="row">
+                    <div class="col-8">
+                      <p style="font-size: small; padding-bottom: 0;">
+                        shipping Cost
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <p style="font-size: 13px; padding-bottom: 0;">Rs. 100/-</p>
+                      <input type="text " value="100" id="shipping" hidden>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="container" >
+                  <div class="row">
+                    <div class="col-8">
+                      <p class="fw-bolder" style="font-size: small; padding-bottom: 0;">
+                        Cart total
+                      </p>
+                    </div>
+                    <div class="col-4">
+                      <p id="inpoa3"  style="font-size: 13px; padding-bottom: 0;"></p>
+                    </div>
+                  </div>
+                  <div
+                class="btn btn-outline-primary   bb3-a mt-3 p-2"
+                style="font-size: 13px;"
+              >
+                PROCEED TO CHECK OUT
+              </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+    </main>
+    <footer>
+      <div class="footer">
+        <h2>Questions? Call 000-800-919-1694</h2>
+        <div class="row">
+          <div class="col">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relation</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+          </div>
+          <div class="col">
+            <a href="#">Help Center</a>
+            <a href="#">Products</a>
+            <a href="#">Cookies Preferences</a>
+            <a href="#">Legal Notices</a>
+          </div>
+          <div class="col">
+            <a href="#">Accounts</a>
+            <a href="#">Ways To Watch</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Only On Coolbridge </a>
+          </div>
+          <div class="col">
+            <a href="#">Media center</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <button class="language-btn">
+          <img
+            src="/globe_image-removebg-preview.png"
+            alt="" style="width: 35px;"
+            class="button-globe"
+          />
+          English <img src="/down-icon.png" style="width: 20px;" alt="" class="down-icon-image" />
+        </button>
+        <h6 class="copyright-content"></h6>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="/myscript.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cal.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

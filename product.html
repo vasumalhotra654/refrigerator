@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.rtl.min.css"
+    integrity="sha384-PRrgQVJ8NNHGieOA1grGdCTIt4h21CzJs6SnWH4YMQ6G5F5+IEzOHz67L4SQaF0o"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <title>Products</title>
+  </head>
+  <style>
+    /* *,
+    *::after,
+    *::before {
+      font-family: "Lato";
+      box-sizing: border-box;
+      height: min-content;
+      
+    } */
+    .tran-a:hover {
+      transform: scale(1.1);
+      transition-duration: 1s;
+    }
+    .bb-a {
+      width: 19%;
+      border: 1px solid black;
+      color: black;
+    }
+    .bb-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 1s;
+      background-color: black;
+      color: #fff;
+    }
+    .spacer-a {
+      height: 50px;
+      padding: 50px;
+    }
+    .tag {
+      background-color: #79b6c8;
+      /* transform: rotate(119deg); */
+      color: white;
+      position: absolute;
+      z-index: 10;
+      width: 60px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      box-shadow: 1px 1px 7px -3px black;
+    }
+    .bb1-a {
+      border: 1px solid black;
+      color: black;
+    }
+    .bb1-a:hover {
+      transition: all ease-in-out;
+      transition-duration: 1s;
+      background-color: black;
+      color: #fff;
+    }
+    .br-a {
+      border: 1px dotted grey;
+      padding: 0.45rem;
+      font-size: small;
+      border-radius: 3px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .br-a:hover {
+      color: #79b6c8 !important;
+      border: 1px solid #79b6c8;
+      transition: ease-in-out;
+      transition-duration: 0.5s;
+    }
+    @media only screen and (max-width: 540px) {
+      
+      .bb1-a {
+        border: 1px solid black;
+        color: black;
+      }
+      .bb-a {
+        border: 1px solid black;
+        color: black;
+        width: 100%;
+      }
+      .ms-a {
+        margin-top: 40px;
+      }
+    }
+  </style>
+  <body>
+    <header class="main-header">
+      <div class="mh1">
+        <img
+          src="./image-removebg-preview (12).png"
+          alt="Coolbridge"
+          class="i1"
+        />
+      </div>
+      <div class="mh3">
+        <ul>
+          <a href="./index.html"><li >Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html" ><li>Products</li></a>
+          <a href="./cart.html" ><li>Cart</li></a>
+        </ul>
+      </div>
+
+      <div class="toggle-div">
+        <a href="./cart.html"><i
+          class="fa-solid fa-cart-shopping"
+          style="color: #ffffff; height: 30px; padding-right: 40px"
+        ></i></a>
+        <button style="object-fit: cover" id="nav-button" onclick="clickNav()">
+          <img id="toggle" src="./toggle_icon-removebg-preview.png" alt="" />
+        </button>
+        <!-- <div id="toggle">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+
+        <div id="menu">Hello, I'm a menu!</div> -->
+      </div>
+      <div class="navlist" >
+        <ul>
+          <a href="./index.html"><li >Home</li></a>
+          <a href="./contactus.html"><li>Contact Us</li></a>
+          <a href="./product.html" ><li>Products</li></a>
+          <a href="./cart.html" ><li>Cart</li></a>
+        </ul>
+      </div>
+      <!-- <div class="mh2">
+        <img src="./cart icon.jpg" alt="cart" class="i2" />
+        <div class="d7">
+        <img src="./toggle_icon-removebg-preview.png" alt="about us" class="i3"/>
+        <div class="d6">  
+            <ul>
+                <li id="li1">Home</li>
+                <li>About Us</li>
+                <li>Restaurants</li>
+                <li>Pages</li>
+                <li>Contact Us</li>
+              </ul>
+        </div>
+    </div>
+        <div class="i4">About Us</div>
+      </div> -->
+    </header>
+    <main>
+      <section>
+        <div
+          class="container-fluid"
+          style="
+            background-image: url(./img/W020220426449217205942.jpg);
+            background-size: cover;
+            padding-top: 100px;
+            padding-bottom: 100px;
+          "
+        >
+          <div class="container text-end">
+            <p class="fs-2 fw-light cs-a mb-0">WE PREFER QUALITY</p>
+            <p class="fs-1 fw-bolder cs-a">SMART REFRIGERATOR</p>
+            <div class="btn btn-outline-primary bb-a">View More</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container pt-3">
+          <p class="fw-light">
+            Home &nbsp; / &nbsp;
+            <a href="" class="p-0 text-decoration-none text-blue">Products</a>
+          </p>
+          <hr />
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="/img/ref.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                712 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                628 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 91,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                630 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                531 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 71,900/-</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-a"></div>
+        <div class="container">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" class="new" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                628 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                531 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 61,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                630 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref.jpg" class="w-100" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                712 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 71,900/-</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  712 Litres, Inverter French Door Refrigerator
+                </p>
+                <p class="pt-2   ps-4">
+                  The refrigerator, designed for utmost convenience, allows easy
+                  transformation from freezer to fridge via temperature
+                  adjustments. With its versatile and robust shelves, lacking
+                  partitions, the appliance offers flexible organization and
+                  quick access to utensils. It's a space-maximizing solution
+                  that caters to user preferences seamlessly.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mb-5">
+          <div class="row">
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  628 Litres, Convertible Side By Side Refrigerator
+                </p>
+                <p class="pt-2 ps-4">
+                  Effortlessly adaptable, this refrigerator can be converted
+                  from a freezer to a fridge in a matter of moments,
+                  prioritizing convenience. Its strong and expansive shelves,
+                  free from partitions, provide a practical solution for
+                  storing, arranging, and retrieving utensils systematically.
+                  Every inch of space is optimized, granting ample room to make
+                  the most out of its storage potential.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  630 Litres, Convertible Side By Side Refrigerator
+                </p>
+                <p class="pt-2  ps-4">
+                  The refrigerator, designed for utmost convenience, allows easy
+                  transformation from freezer to fridge via temperature
+                  adjustments. With its versatile and robust shelves, lacking
+                  partitions, the appliance offers flexible organization and
+                  quick access to utensils. It's a space-maximizing solution
+                  that caters to user preferences seamlessly.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  531 Litres, Inverter French Door Refrigerator
+                </p>
+                <p class="pt-2  ps-4">
+                  Effortlessly adaptable, this refrigerator can be converted
+                  from a freezer to a fridge in a matter of moments,
+                  prioritizing convenience. Its strong and expansive shelves,
+                  free from partitions, provide a practical solution for
+                  storing, arranging, and retrieving utensils systematically.
+                  Every inch of space is optimized, granting ample room to make
+                  the most out of its storage potential.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section id="" class="padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 ms-a col-sm-12">
+              <div class="text-center br-a">
+                <h5 class="">free shipping worldwide</h5>
+                <span>Free shipping worldwide</span>
+              </div>
+            </div>
+            <div class="col-lg-4 ms-a col-sm-12">
+              <div class="text-center br-a">
+                <h5 class="">24/7 CUSTOMER SERVICE</h5>
+                <span>Free shipping worldwide</span>
+              </div>
+            </div>
+            <div class="col-lg-4 ms-a col-sm-12">
+              <div class="text-center br-a">
+                <h5 class="">MONEY BACK GUARANTEE!</h5>
+                <span>Free shipping worldwide</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+      <section>
+        <div class="container">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="/img/ref.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                712 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <span class="tag">New</span>
+              <img src="img/ref2.jpg" class="w-100" alt="wash" />
+
+              <p class="ps-4 pt-4">
+                628 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 91,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                630 Litres, Convertible Side By Side Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 81,900/-</p>
+            </div>
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+              <p class="ps-4 pt-4">
+                531 Litres, Inverter French Door Refrigerator
+              </p>
+              <p class="text-primary ps-4">Rs. 71,900/-</p>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-a"></div>
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref3.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  630 Litres, Convertible Side By Side Refrigerator
+                </p>
+                <p class="pt-2 ps-4">
+                  The refrigerator, designed for utmost convenience, allows easy
+                  transformation from freezer to fridge via temperature
+                  adjustments. With its versatile and robust shelves, lacking
+                  partitions, the appliance offers flexible organization and
+                  quick access to utensils. It's a space-maximizing solution
+                  that caters to user preferences seamlessly.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer-a"></div>
+        <div class="container mb-5">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-3 tran-a">
+              <img src="img/ref5.jpg" class="w-100" alt="wash" />
+            </div>
+            <div class="col-lg-9">
+              <div class="container">
+                <p class="fw-bold pt-4 ps-4">
+                  531 Litres, Inverter French Door Refrigerator
+                </p>
+                <p class="pt-2 ps-4">
+                  Effortlessly adaptable, this refrigerator can be converted
+                  from a freezer to a fridge in a matter of moments,
+                  prioritizing convenience. Its strong and expansive shelves,
+                  free from partitions, provide a practical solution for
+                  storing, arranging, and retrieving utensils systematically.
+                  Every inch of space is optimized, granting ample room to make
+                  the most out of its storage potential.
+                </p>
+                <div class="container-fluid mb-4">
+                  <div class="row">
+                    <div class="col-lg-2 pe-0 me-0" style="width: max-content">
+                      <div
+                        class="text-center pe-2"
+                        style="width: max-content; height: max-content"
+                      >
+                        <img
+                          src="http://themesindustry.com/html/eren/images/star.png"
+                          class="w-100"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-2 pe-0 me-0" style="color: #606060">
+                      10 review(s)
+                    </div>
+                    <div class="col-lg-4 pe-0 me-0" style="color: #606060">
+                      Add your review
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-auto">
+                  <div class="row d-flex">
+                    <div class="col-lg-2 ms-4">
+                      <div class="btn btn-outline-primary bb1-a">
+                        Add to cart
+                      </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="spacer-a"></div>
+    </main>
+    <footer>
+      <div class="footer">
+        <h2>Questions? Call 000-800-919-1694</h2>
+        <div class="row">
+          <div class="col">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relation</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+          </div>
+          <div class="col">
+            <a href="#">Help Center</a>
+            <a href="#">Products</a>
+            <a href="#">Cookies Preferences</a>
+            <a href="#">Legal Notices</a>
+          </div>
+          <div class="col">
+            <a href="#">Accounts</a>
+            <a href="#">Ways To Watch</a>
+            <a href="#">Corporate Information</a>
+            <a href="#">Only On Coolbridge </a>
+          </div>
+          <div class="col">
+            <a href="#">Media center</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <button class="language-btn">
+          <img
+            src="/globe_image-removebg-preview.png"
+            alt="" style="width: 35px;"
+            class="button-globe"
+          />
+          English <img src="/down-icon.png" style="width: 30px;" alt="" class="down-icon-image" />
+        </button>
+        <h6 class="copyright-content"></h6>
+      </div>
+    </footer>
+    <script src="/myscript.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
